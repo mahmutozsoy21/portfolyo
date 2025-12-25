@@ -43,8 +43,8 @@ export default function Navbar() {
                 </ul>
             </nav>
             {open && (
-                <div className="md:hidden absolute top-full left-0 w-full
-                  bg-black/90 backdrop-blur border-t border-gray-800">
+                <div className="md:hidden border-t border-gray-800
+                  bg-black/90 backdrop-blur">
                     <ul className="flex flex-col items-center gap-6 py-6">
                         {navItems.map((item) => (
                             <li key={item.href}>
@@ -60,6 +60,7 @@ export default function Navbar() {
                     </ul>
                 </div>
             )}
+
 
         </header>
     );

@@ -3,9 +3,13 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Image from "next/image";
 
+
 export default function Home() {
   return (
+
+
     <main className="space-y-32">
+
       {/* HERO */}
       <section className="relative min-h-screen overflow-hidden">
 
@@ -22,17 +26,16 @@ export default function Home() {
 
           {/* Sol kolon */}
           <div className="space-y-6">
-            <p className="text-sm tracking-widest uppercase opacity-70">
-              Merhaba, Ben Mahmut Özsoy
-            </p>
+            <h2 className="text-3xl tracking-widest uppercase opacity-70">
+              I am Mahmut Özsoy
+            </h2>
 
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Yapay zekâ, Mobil ve Akıllı sistemler
+              Software Engineer
             </h1>
 
             <p className="max-w-md opacity-80">
-              İle
-              gerçek problemlerle çalışan ürünler geliştiriyorum.
+              Yapay zekâ, mobil uygulama ve akıllı sistemler üzerine çalışan bir yazılım mühendisiyim. Gerçek dünya problemlerine yenilikçi çözümler getirirken hem performansı hem de kullanıcı deneyimini ön planda tutarım.
             </p>
 
             {/* Sosyal ikonlar */}
@@ -43,7 +46,7 @@ export default function Home() {
 
           {/* Sağ kolon */}
           <div className="flex justify-center md:justify-end">
-            <div className="relative w-[280px] h-[360px] rounded-2xl overflow-hidden">
+            <div className="relative w-[280px] h-[360px] rounded-2xl overflow-hidden rotate-6 hover:rotate-0 transition-transform duration-500 border-4 border-gray-700">
               {
                 <Image
                   src="/images/mahmut.jpeg"

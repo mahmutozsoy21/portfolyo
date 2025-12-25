@@ -7,7 +7,7 @@ const aboutCards = [
         title: "Üniversite Hayatı",
         icon: "🎓",
         description:
-            "Bilgisayar mühendisliği eğitimi sürecimde yazılım geliştirme, algoritmalar ve yapay zekâ alanlarında yoğunlaştım. Akademik projeleri gerçek dünya problemleriyle birleştirmeye odaklandım.",
+            "Yazılım mühendisliği eğitimi sürecimde yazılım geliştirme, algoritmalar ve yapay zekâ alanlarında yoğunlaştım. Akademik projeleri gerçek dünya problemleriyle birleştirmeye odaklandım.",
     },
     {
         title: "Flutter & Mobil Geliştirme",

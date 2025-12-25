@@ -47,7 +47,7 @@ export default function Home() {
 
 
             <p className="max-w-md text-gray-300 leading-relaxed">
-              Yapay zekâ, mobil uygulama ve akıllı sistemler üzerine çalışan
+              Yapay zekâ ve mobil uygulama  üzerine çalışan
               bir yazılım mühendisiyim. Gerçek dünya problemlerine
               yenilikçi çözümler getirirken performans ve kullanıcı
               deneyimini ön planda tutarım.

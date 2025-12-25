@@ -11,7 +11,7 @@ import {
 export default function ContactSection() {
     return (
         <section id="contact" className="py-24">
-            <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
 
                 {/* SOL TARAF – METİN */}
                 <motion.div
@@ -53,7 +53,7 @@ export default function ContactSection() {
                     viewport={{ once: true }}
                     className="flex md:justify-end"
                 >
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-row md:flex-col gap-4 justify-center md:justify-start">
 
                         {[
                             {

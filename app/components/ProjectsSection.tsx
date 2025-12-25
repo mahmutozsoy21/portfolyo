@@ -37,7 +37,7 @@ export default function ProjectsSection() {
                 </motion.h2>
 
                 {/* Kartlar */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                     {projects.map((project, index) => (
                         <motion.a
                             key={project.slug}
@@ -57,7 +57,7 @@ export default function ProjectsSection() {
                                     alt={project.title}
                                     width={600}
                                     height={320}
-                                    className="object-cover w-full h-[220px] group-hover:scale-105 transition"
+                                    className="object-cover w-full h-[180px] md:h-[220px] group-hover:scale-105 transition"
                                 />
                             </div>
 

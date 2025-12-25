@@ -27,7 +27,7 @@ export default function Home() {
         </div>
 
         {/* İçerik */}
-        <div className="relative max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-16 min-h-screen">
+        <div className="relative max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-16 min-h-[90vh] md:min-h-screen">
 
           {/* SOL KOLON */}
           <motion.div
@@ -94,15 +94,17 @@ export default function Home() {
 
           {/* SAĞ KOLON – GÖRSEL */}
           <motion.div
+
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="flex justify-center md:justify-end"
+            className="flex justify-center md:justify-end space-y-6 text-center md:text-left"
+
           >
-            <div className="relative w-[280px] h-[360px] rounded-2xl overflow-hidden
+            <div className="relative w-[220px] h-[300px] md:w-[280px] md:h-[360px]rounded-2xl overflow-hidden
                             rotate-6 hover:rotate-0 transition-transform duration-500
-                            border border-gray-500/30 shadow-2xl">
+                            border border-gray-500/30 shadow-2xl padding-box-green-400 mt-8 md:mt-0">
               <Image
                 src="/images/mahmut.jpeg"
                 alt="Mahmut Özsoy"

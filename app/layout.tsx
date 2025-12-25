@@ -19,3 +19,9 @@ export default function RootLayout({
     </html>
   );
 }
+export const metadata = {
+  title: "Mahmut Özsoy | AI & Mobile Software Engineer",
+  description:
+    "Mahmut Özsoy — Yapay zekâ, mobil uygulama ve akıllı sistemler geliştiren yazılım mühendisi. Projeler, portföy ve iletişim.",
+};
+

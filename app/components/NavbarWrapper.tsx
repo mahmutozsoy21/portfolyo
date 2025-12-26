@@ -7,8 +7,9 @@ export default function NavbarWrapper() {
     const pathname = usePathname();
 
     // anasayfada navbar gösterme
-    if (pathname === "/") return null;
-    else return <Navbar />;
+    if (pathname === "/") return pathname === "/";
+
+    return <Navbar />;
 
 
 }

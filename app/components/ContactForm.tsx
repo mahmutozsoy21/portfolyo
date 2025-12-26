@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 
+// Formspree entegrasyonu ile otomatik e-posta gönderimi
 export default function ContactForm() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -19,26 +20,35 @@ export default function ContactForm() {
         return true;
     }
 
-    function handleSubmit(e: React.FormEvent) {
+    async function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         if (!validate()) return;
 
-        const body = `İsim: ${name}\nE-posta: ${email}\n\n${message}`;
-        const mailto = `mailto:mahmutozsoy2604@gmail.com?subject=${encodeURIComponent(
-            subject || "Web sitesi üzerinden iletişim"
-        )}&body=${encodeURIComponent(body)}`;
+        // Form verisini Formspree'ye gönder
+        const formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("subject", subject);
+        formData.append("message", message);
 
-        // Open mail client
-        window.location.href = mailto;
-        setSent(true);
-        // Reset form after short delay
-        setTimeout(() => {
+        const res = await fetch("https://formspree.io/f/xwkgyyqg", {
+            method: "POST",
+            body: formData,
+            headers: {
+                Accept: "application/json",
+            },
+        });
+
+        if (res.ok) {
+            setSent(true);
             setName("");
             setEmail("");
             setSubject("");
             setMessage("");
-            setSent(false);
-        }, 1200);
+            setTimeout(() => setSent(false), 2000);
+        } else {
+            setError("Gönderim başarısız oldu. Lütfen tekrar deneyin.");
+        }
     }
 
     return (
@@ -48,6 +58,7 @@ export default function ContactForm() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Adın"
+                    name="name"
                     className="w-full px-4 py-2 rounded-lg bg-black/20 border border-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400"
                 />
 
@@ -56,6 +67,7 @@ export default function ContactForm() {
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="E-posta adresin"
                     type="email"
+                    name="email"
                     className="w-full px-4 py-2 rounded-lg bg-black/20 border border-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400"
                 />
 
@@ -63,6 +75,7 @@ export default function ContactForm() {
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
                     placeholder="Konu (opsiyonel)"
+                    name="subject"
                     className="w-full px-4 py-2 rounded-lg bg-black/20 border border-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400"
                 />
 
@@ -71,6 +84,7 @@ export default function ContactForm() {
                     onChange={(e) => setMessage(e.target.value)}
                     placeholder="Mesajınız"
                     rows={5}
+                    name="message"
                     className="w-full px-4 py-3 rounded-lg bg-black/20 border border-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 resize-none"
                 />
             </div>
@@ -85,7 +99,7 @@ export default function ContactForm() {
                     Gönder
                 </button>
 
-                {sent && <span className="text-sm text-emerald-300">E-posta istemcisi açıldı.</span>}
+                {sent && <span className="text-sm text-emerald-300">Mesajınız iletildi!</span>}
             </div>
         </form>
     );

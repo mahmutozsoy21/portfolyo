@@ -57,7 +57,13 @@ export default function ContactSection() {
                     viewport={{ once: true }}
                     className="space-y-6"
                 >
-                    <h2 className="text-3xl font-bold">İletişim</h2>
+                    <h2 className=" text-3xl font-bold mb-12
+    text-zinc-300
+    inline-block px-4 py-2 rounded-lg
+    transition-all duration-300
+    hover:text-zinc-100
+    hover:bg-zinc-300/10
+    hover:shadow-lg hover:shadow-zinc-400/20">İletişim</h2>
 
                     <p className="text-gray-400 max-w-md">
                         Yeni bir proje, iş birliği veya fikir hakkında
@@ -87,7 +93,24 @@ export default function ContactSection() {
                                 whileHover={{ y: -6, scale: 1.02 }}
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ duration: 0.25 }}
-                                className="group flex items-center gap-4 p-3 rounded-xl border border-gray-800 bg-black/30 hover:bg-black/40 hover:shadow-lg hover:shadow-emerald-400/10 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                                className="group
+flex items-center gap-4
+p-3
+rounded-xl
+border border-gray-800
+bg-black/30
+text-gray-300
+
+hover:bg-gray-900/60
+hover:border-gray-400
+hover:text-gray-100
+hover:shadow-lg
+hover:shadow-white/15
+
+focus:outline-none
+focus:ring-2
+focus:ring-gray-400
+transition-all duration-300"
                             >
                                 <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg text-xl md:text-2xl bg-black/20 border border-gray-700">
                                     {item.icon}

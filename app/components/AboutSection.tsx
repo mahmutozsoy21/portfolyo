@@ -52,7 +52,14 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="text-3xl font-bold mb-12 text-emerald-200"
+                    className=" text-3xl font-bold mb-12
+    text-zinc-300
+    inline-block px-4 py-2 rounded-lg
+    transition-all duration-300
+    hover:text-zinc-100
+    hover:bg-zinc-300/10
+    hover:shadow-lg hover:shadow-zinc-400/20"
+
                 >
                     Hakkımda
                 </motion.h2>
@@ -67,7 +74,19 @@ export default function AboutSection() {
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -8, scale: 1.02 }}
-                            className="relative border border-gray-800 rounded-xl p-6 bg-black/40 backdrop-blur hover:border-emerald-300 transition"
+                            className="
+                            relative rounded-xl p-6
+border border-gray-800
+bg-black/40 backdrop-blur
+
+hover:bg-gradient-to-br
+hover:from-zinc-200/10
+hover:to-zinc-400/10
+hover:border-emerald-100
+
+
+transition-colors duration-300
+"
                         >
                             <div className="text-3xl mb-4">{card.icon}</div>
 

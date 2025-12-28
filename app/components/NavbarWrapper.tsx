@@ -6,8 +6,7 @@ import Navbar from "./Navbar";
 export default function NavbarWrapper() {
     const pathname = usePathname();
 
-    // anasayfada navbar gösterme
-    if (pathname === "/") return pathname === "/";
+    return <Navbar pathname={pathname} />;
 
     return <Navbar />;
 

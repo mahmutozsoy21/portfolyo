@@ -31,7 +31,13 @@ export default function ProjectsSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                     viewport={{ once: true }}
-                    className="text-3xl font-bold mb-12 text-emerald-200"
+                    className=" text-3xl font-bold mb-12
+    text-zinc-300
+    inline-block px-4 py-2 rounded-lg
+    transition-all duration-300
+    hover:text-zinc-100
+    hover:bg-zinc-300/10
+    hover:shadow-lg hover:shadow-zinc-400/20"
                 >
                     Projeler
                 </motion.h2>
@@ -47,8 +53,17 @@ export default function ProjectsSection() {
                             transition={{ duration: 0.4, delay: index * 0.1 }}
                             viewport={{ once: true }}
                             whileHover={{ y: -8, scale: 1.02 }}
-                            className="group relative border border-gray-800 rounded-xl overflow-hidden
-                                 bg-black/40 backdrop-blur hover:border-emerald-300 transition"
+                            className="
+                            relative rounded-xl p-6
+border border-gray-800
+bg-black/40 backdrop-blur
+
+hover:bg-zinc-200/10
+hover:border-zinc-300
+
+transition-colors duration-300
+group block overflow-hidden
+"
                         >
                             {/* Görsel (sadece proje için image tanımlıysa göster) */}
                             {project.image && (
@@ -73,7 +88,7 @@ export default function ProjectsSection() {
                                     {project.shortDescription}
                                 </p>
 
-                                <span className="inline-block text-sm text-emerald-300 group-hover:underline">
+                                <span className="inline-block text-sm text-emerald-100 group-hover:underline">
                                     Detayları Gör →
                                 </span>
                             </div>

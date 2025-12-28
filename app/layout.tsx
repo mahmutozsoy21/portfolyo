@@ -8,6 +8,10 @@ export const metadata = {
     default: "Mahmut Özsoy | AI & Mobile Software Engineer",
     template: "%s | Mahmut Özsoy",
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 
   description:
     "Mahmut Özsoy — yapay zekâ, mobil uygulama ve makine öğrenmesi alanlarında çalışan bir yazılım mühendisidir.",

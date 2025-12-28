@@ -5,8 +5,9 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactSection from "./components/ContactSection";
 import Navbar from "./components/Navbar";
 import Image from "next/image";
+import { motion } from "framer-motion";
+
 // Removed duplicate import of motion and AnimatePresence
-import { motion, AnimatePresence } from "framer-motion";
 import {
   FaGithub,
   FaLinkedin,
@@ -18,18 +19,14 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+
+
       <main className="space-y-6">
 
         {/* HERO */}
         <section className="relative min-h-[60vh] overflow-hidden">
 
-          {/* Arka plan yazı */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <span className="text-[20rem] font-bold text-gray-400 select-none">
 
-            </span>
-          </div>
 
           {/* İçerik */}
           <div className="relative max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12 min-h-[65vh] md:min-h-[85vh]">
@@ -43,21 +40,35 @@ export default function Home() {
               className="space-y-6"
             >
 
-              <p className="text-3xl md:text-4xl text-emerald-300 font-extrabold tracking-tight">
+              <h2
+                className="
+    text-6xl md:text-4xl
+    font-medium
+    tracking-wide
+    mb-2
+    bg-gradient-to-r
+    from-gray-400
+    via-gray-300
+    to-gray-100
+    bg-clip-text
+    text-transparent
+  "
+              >
                 I am Mahmut Özsoy
-              </p>
+              </h2>
 
 
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight bg-gradient-to-r from-emerald-300 via-emerald-200 to-emerald-100 bg-clip-text text-transparent">
+
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight bg-gradient-to-r from-emerald-100 via-emerald-0 to-emerald-0 bg-clip-text text-transparent">
                 Software <br /> Engineer
               </h1>
 
 
-              <p className="max-w-md text-gray-300/90 leading-relaxed text-base md:text-lg">
+              <h2 className="max-w-md text-gray-300/90 leading-relaxed text-base md:text-lg">
                 Yapay zekâ ve mobil uygulama üzerine çalışan bir yazılım
-                mühendisiyim. Gerçek dünya problemlerine yenilikçi çözümler
+                mühe1ndisiyim. Gerçek dünya problemlerine yenilikçi çözümler
                 getirirken performans ve kullanıcı deneyimini ön planda tutarım.
-              </p>
+              </h2>
 
               {/* Sosyal ikonlar */}
               <div className="flex gap-4 pt-4">
@@ -94,10 +105,22 @@ export default function Home() {
                       whileHover={{ y: -8, scale: 1.12, rotate: 6 }}
                       whileTap={{ scale: 0.96 }}
                       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      className="group w-14 h-14 md:w-16 md:h-16 flex items-center justify-center
-                               rounded-full border border-gray-800
-                               bg-black/40 backdrop-blur
-                               hover:border-emerald-400 hover:text-emerald-300 hover:shadow-lg hover:shadow-emerald-400/20 text-xl md:text-2xl transition-transform duration-200"
+                      className="group
+w-14 h-14 md:w-16 md:h-16
+flex items-center justify-center
+rounded-full
+border border-gray-700
+bg-black/40 backdrop-blur
+text-gray-300
+hover:border-gray-300
+hover:text-gray-100
+hover:shadow-lg
+hover:shadow-white/20
+text-xl md:text-2xl
+transition-all duration-300
+hover:shadow-[0_0_12px_rgba(255,255,255,0.25)]
+
+"
                     >
                       <span className="pointer-events-none">{item.icon}</span>
                     </motion.a>
@@ -130,7 +153,7 @@ export default function Home() {
                               border border-gray-500/30 shadow-2xl mt-8 md:mt-0"
               >
                 <Image
-                  src="/images/mahmut.jpeg"
+                  src="/images/foto.jpg"
                   alt="Mahmut Özsoy"
                   fill
                   className="object-cover"
@@ -144,14 +167,58 @@ export default function Home() {
         </section>
         {/* DİĞER BÖLÜMLER */}
 
-        <hr className="my-12 border-0 h-1 bg-gradient-to-r from-emerald-900/60 via-emerald-400/40 to-emerald-900/60 rounded-full shadow-md" />
+        <hr
+          className="
+    my-12
+    mx-auto
+    max-w-4xl
+    border-0
+    h-[2px]
+    bg-gradient-to-r
+    from-transparent
+    via-gray-300/80
+    to-transparent
+    rounded-full
+    shadow-[0_0_6px_rgba(255,255,255,0.25)]
+  "
+        />
+
         <AboutSection />
-        <hr className="my-12 border-0 h-1 bg-gradient-to-r from-emerald-900/60 via-emerald-400/40 to-emerald-900/60 rounded-full shadow-md" />
+        <hr
+          className="
+    my-12
+    mx-auto
+    max-w-4xl
+    border-0
+    h-[2px]
+    bg-gradient-to-r
+    from-transparent
+    via-gray-300/80
+    to-transparent
+    rounded-full
+    shadow-[0_0_6px_rgba(255,255,255,0.25)]
+  "
+        />
         <ProjectsSection />
-        <hr className="my-12 border-0 h-1 bg-gradient-to-r from-emerald-900/60 via-emerald-400/40 to-emerald-900/60 rounded-full shadow-md" />
+        <hr
+          className="
+    my-12
+    mx-auto
+    max-w-4xl
+    border-0
+    h-[2px]
+    bg-gradient-to-r
+    from-transparent
+    via-gray-300/80
+    to-transparent
+    rounded-full
+    shadow-[0_0_6px_rgba(255,255,255,0.25)]
+  "
+        />
         <ContactSection />
 
-      </main>
+
+      </main >
     </>
   );
 }

@@ -46,7 +46,7 @@ export default function ContactSection() {
     ];
 
     return (
-        <section id="contact" className="py-12">
+        <section id="contact" className="py-12 md:py-24">
             <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
 
                 {/* SOL TARAF – FORM */}
@@ -82,7 +82,7 @@ export default function ContactSection() {
                     viewport={{ once: true }}
                     className="flex md:justify-end items-end"
                 >
-                    <div className="flex flex-col gap-3 w-full md:w-auto mt-8 md:mt-36">
+                    <div className="flex flex-col gap-3 w-full md:w-auto mt-8 md:mt-48">
                         {items.map((item, index) => (
                             <motion.a
                                 key={index}
@@ -90,7 +90,7 @@ export default function ContactSection() {
                                 target={item.href.startsWith("http") ? "_blank" : undefined}
                                 rel="noopener noreferrer"
                                 aria-label={item.label}
-                                whileHover={{ y: -6, scale: 1.02 }}
+                                whileHover={{ y: -6, scale: 1.03 }}
                                 whileTap={{ scale: 0.98 }}
                                 transition={{ duration: 0.25 }}
                                 className="group

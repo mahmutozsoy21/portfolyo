@@ -35,6 +35,8 @@ export default function ContactForm() {
         formData.append("email", email);
         formData.append("subject", subject);
         formData.append("message", message);
+        formData.append("_replyto", email);
+
 
         const res = await fetch("https://formspree.io/f/xgoeyydy", {
             method: "POST",
@@ -44,6 +46,7 @@ export default function ContactForm() {
             },
         });
 
+        const data = await res.json();
 
         if (res.ok) {
             setSent(true);
@@ -53,8 +56,12 @@ export default function ContactForm() {
             setMessage("");
             setTimeout(() => setSent(false), 2500);
         } else {
-            setError("Gönderim başarısız oldu. Lütfen tekrar deneyin.");
+            setError(
+                data?.errors?.[0]?.message ||
+                "Gönderim başarısız oldu. Lütfen tekrar deneyin."
+            );
         }
+
     }
 
     return (

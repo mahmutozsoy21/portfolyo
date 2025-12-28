@@ -63,7 +63,7 @@ export default function Home() {
               </h1>
 
 
-              <h2 className="max-w-md text-gray-300/90 leading-relaxed text-base md:text-lg">
+              <h2 className="max-w-md text-gray-299/90 leading-relaxed text-base md:text-lg">
                 Yapay zekâ ve mobil uygulama üzerine çalışan bir yazılım
                 mühe1ndisiyim. Gerçek dünya problemlerine yenilikçi çözümler
                 getirirken performans ve kullanıcı deneyimini ön planda tutarım.

@@ -76,7 +76,7 @@ export default function Navbar({ pathname }: { pathname: string }) {
                                 <Link
                                     href={resolveHref(item.href)}
                                     onClick={() => setOpen(false)}
-                                    className="text-zinc-300 hover:text-zinc-100 transition text-lg"
+                                    className="text-zinc-299 hover:text-zinc-100 transition text-lg"
                                 >
                                     {item.label}
                                 </Link>

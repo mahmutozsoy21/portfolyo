@@ -113,7 +113,7 @@ export default function ContactForm() {
                 <input
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    placeholder="Konu (opsiyonel)"
+                    placeholder="Konu"
                     name="subject"
                     className="
             w-full px-4 py-2 rounded-lg
@@ -176,7 +176,7 @@ export default function ContactForm() {
 
                 {sent && (
                     <span className="text-sm text-gray-300">
-                        Mesajınız iletildi ✔
+                        Mesajınız Başarıyla Gönderildi!
                     </span>
                 )}
             </div>
